@@ -17,7 +17,7 @@ section {
   }
 }
 
-section, section div {
+.services, .about, .services div, .about div {
   display: flex;
   flex-direction: column;
   gap: 1rem;
