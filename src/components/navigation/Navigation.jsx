@@ -4,7 +4,7 @@ import "./Navigation.scss";
 const Navigation = () => {
   return (
     <nav className="navigation">
-      <div className="navigation__logo">C</div>
+      <div className="navigation__logo">Ch.</div>
       <ul className="navigation__list"></ul>
       <WorkWithMe />
     </nav>
