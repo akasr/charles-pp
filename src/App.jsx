@@ -1,4 +1,4 @@
-import { Navigation, Hero, Socials, Main } from "./components";
+import { Navigation, Hero, Socials, Main, Blogs } from "./components";
 import "./App.scss";
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
       </header>
       <main>
         <Main />
+        <Blogs />
       </main>
     </div>
   );
