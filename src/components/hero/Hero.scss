@@ -1,0 +1,12 @@
+.hero {
+  margin: 25% 1rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  &__title {
+    font-size: 4rem;
+    font-weight: unset;
+  }
+}

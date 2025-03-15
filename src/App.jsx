@@ -1,12 +1,13 @@
+import { Navigation, Hero } from "./components";
 import "./App.scss";
-import Navigation from "./components/navigation/Navigation";
 
-function App() {
+const App = () => {
   return (
-    <>
+    <div className="App">
       <Navigation />
-    </>
-  )
-}
+      <Hero />
+    </div>
+  );
+};
 
 export default App;
