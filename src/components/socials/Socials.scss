@@ -1,0 +1,11 @@
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+
+  a {
+    color: #292828;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+}

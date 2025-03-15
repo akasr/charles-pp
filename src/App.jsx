@@ -1,4 +1,4 @@
-import { Navigation, Hero } from "./components";
+import { Navigation, Hero, Socials } from "./components";
 import "./App.scss";
 
 const App = () => {
@@ -6,6 +6,7 @@ const App = () => {
     <div className="App">
       <Navigation />
       <Hero />
+      <Socials />
     </div>
   );
 };
