@@ -5,5 +5,6 @@ import Socials from "./socials/Socials";
 import Main from "./main/Main";
 import Blogs from "./blogs/Blogs";
 import Opensource from "./opensource/Opensource";
+import GetInTouch from "./getintouch/GetInTouch";
 
-export { Navigation, WorkWithMe, Hero, Socials, Main, Blogs, Opensource };
+export { Navigation, WorkWithMe, Hero, Socials, Main, Blogs, Opensource, GetInTouch };

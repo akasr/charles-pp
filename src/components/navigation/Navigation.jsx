@@ -1,10 +1,11 @@
 import WorkWithMe from "../WorkWithMe";
+import Logo from "../Logo";
 import "./Navigation.scss";
 
 const Navigation = () => {
   return (
     <nav className="navigation">
-      <div className="navigation__logo">Ch.</div>
+      <Logo />
       <ul className="navigation__list"></ul>
       <WorkWithMe />
     </nav>
