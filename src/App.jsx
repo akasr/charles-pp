@@ -1,4 +1,4 @@
-import { Navigation, Hero, Socials, Main, Blogs, Opensource, GetInTouch } from "./components";
+import { Navigation, Hero, Socials, Main, Blogs, Opensource, GetInTouch, Footer } from "./components";
 import "./App.scss";
 
 const App = () => {
@@ -16,6 +16,7 @@ const App = () => {
       </main>
       <footer>
         <GetInTouch />
+        <Footer />
       </footer>
     </div>
   );

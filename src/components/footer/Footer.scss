@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+
+  .name {
+    font-weight: bold;
+  }
+
+  &__copyright__text {
+    font-size: 0.8rem;
+    color: #333232;
+  }
+}
