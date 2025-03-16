@@ -4,26 +4,60 @@ import { faCode, faCodeFork, faStar } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 
 const Opensource = () => {
+  
+
   useEffect(() => {
-    // Add click event handlers after component mount
+
+    // Remove active classes from all cards and buttons
+    const removeActiveClasses = () => {
+      document.querySelectorAll("article").forEach((card) => {
+        card.classList.remove("current");
+      });
+
+      const buttons = document.querySelectorAll(".card-btn");
+      buttons.forEach((btn) => {
+        btn.classList.remove("current-card-btn");
+      });
+    };
+
+    // Swap card by button click
+    const swapCardByBtn = (button, index) => {
+      removeActiveClasses();
+
+      document.getElementById(`card${index + 1}`).classList.add("current");
+      button.classList.add("current-card-btn");
+    };
+
+    // Swap card every 4 seconds
+    const swapCardByTime = () => {
+      const currentCard = document.querySelector(".current");
+      const currentButton = document.querySelector(".current-card-btn");
+
+      removeActiveClasses();
+
+      if (
+        currentCard.nextElementSibling &&
+        currentCard.nextElementSibling.tagName === "ARTICLE"
+      ) {
+        currentCard.nextElementSibling.classList.add("current");
+        currentButton.nextElementSibling.classList.add("current-card-btn");
+      } else {
+        document.getElementById("card1").classList.add("current");
+        document.getElementById("card-btn1").classList.add("current-card-btn");
+      }
+    };
+
     const buttons = document.querySelectorAll(".card-btn");
 
     buttons.forEach((button, index) => {
       button.addEventListener("click", () => {
-        // Remove active classes from all cards and buttons
-        document.querySelectorAll("article").forEach((card) => {
-          card.classList.remove("current");
-        });
-
-        buttons.forEach((btn) => {
-          btn.classList.remove("current-card-btn");
-        });
-
-        // Add active classes to selected card and button
-        document.getElementById(`card${index + 1}`).classList.add("current");
-        button.classList.add("current-card-btn");
+        swapCardByBtn(button, index);
       });
     });
+
+    const intervalId = setInterval(swapCardByTime, 4000);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -82,9 +116,9 @@ const Opensource = () => {
       </article>
 
       <div className="btn-group">
-        <div className="card-btn"></div>
-        <div className="card-btn current-card-btn"></div>
-        <div className="card-btn"></div>
+        <div className="card-btn" id="card-btn1"></div>
+        <div className="card-btn current-card-btn" id="card-btn2"></div>
+        <div className="card-btn" id="card-btn3"></div>
       </div>
     </section>
   );
